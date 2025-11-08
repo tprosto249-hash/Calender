@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="windows-1251">
+    <title>Календар подій</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1>Календар подій</h1>
+
+<label>Обери дату:</label>
+<input type="date" id="datePicker">
+
+<h2>Події:</h2>
+<ul id="eventsList"></ul>
+
+<h2>Додати подію</h2>
+<input type="text" id="title" placeholder="Назва" required>
+<input type="time" id="time">
+<textarea id="description" placeholder="Опис"></textarea>
+<button id="addBtn">Додати</button>
+
+<script src="script.js"></script>
+</body>
+</html>
