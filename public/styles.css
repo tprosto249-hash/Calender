@@ -1,0 +1,88 @@
+:root {
+    --bg: #fff;
+    --text: #111;
+    --muted: #666;
+    --card: #f9f9f9;
+}
+
+[data-theme="dark"] {
+    --bg: #111;
+    --text: #eee;
+    --muted: #bbb;
+    --card: #222;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+.filters {
+    margin-top: 6px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+input, select, textarea, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background: var(--card);
+    color: var(--text);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background: var(--card);
+}
+
+.ev-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 0.9em;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 0.9em;
+    margin-top: 6px;
+}
+
+.actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+}
+
+button {
+    cursor: pointer;
+}
