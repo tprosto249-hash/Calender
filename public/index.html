@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="windows -1251">
+  <title>Календар подій</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Календар подій</h1>
+      <div class="theme-switch">
+        <label>
+          <input type="checkbox" id="themeToggle">
+          Темна тема
+        </label>
+      </div>
+    </header>
+
+    <section class="controls">
+      <label>Обери дату:
+        <input type="date" id="datePicker">
+      </label>
+
+      <div class="filters">
+        <select id="filterCategory">
+          <option value="">Усі категорії</option>
+          <option value="work">Робота</option>
+          <option value="study">Навчання</option>
+          <option value="personal">Особисте</option>
+          <option value="other">Інше</option>
+        </select>
+
+        <select id="filterStatus">
+          <option value="">Усі статуси</option>
+          <option value="scheduled">Запланована</option>
+          <option value="completed">Завершена</option>
+          <option value="overdue">Прострочена</option>
+        </select>
+
+        <button id="applyFilters">Фільтрувати</button>
+      </div>
+    </section>
+
+    <main>
+      <h2>Події:</h2>
+      <ul id="eventsList"></ul>
+
+      <h2>Додати подію</h2>
+      <input type="text" id="title" placeholder="Назва" required>
+      <input type="date" id="evDate">
+      <input type="time" id="evTime">
+      <textarea id="description" placeholder="Опис"></textarea>
+
+      <label>Категорія:
+        <select id="category">
+          <option value="work">Робота</option>
+          <option value="study">Навчання</option>
+          <option value="personal">Особисте</option>
+          <option value="other" selected>Інше</option>
+        </select>
+      </label>
+
+      <label>Email для нагадування (опційно):
+        <input type="email" id="email" placeholder="you@example.com">
+      </label>
+
+      <label>Нагадати:
+        <select id="reminder">
+          <option value="0" data-type="none">Не нагадувати</option>
+          <option value="10" data-type="email">За 10 хвилин</option>
+          <option value="60" data-type="email">За 1 годину</option>
+          <option value="1440" data-type="email">За 1 день</option>
+        </select>
+      </label>
+
+      <button id="addBtn">Додати</button>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
